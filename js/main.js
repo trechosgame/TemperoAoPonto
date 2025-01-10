@@ -20,7 +20,7 @@ window.addEventListener("load", () => {
 /* mobile menu */
 
 const menuBtn = document.querySelector(".header .menu-btn");
-const menu = document.querySelector(".header .menu-btn");
+const menu = document.querySelector(".header .menu");
 const menuLinks = menu.querySelectorAll("a");
 
 function toggleMenu(){
@@ -39,6 +39,7 @@ function menuLinkAction(){
 menuLinks.forEach((a) => {
   a.addEventListener("click", menuLinkAction);
 });
+
 /* header bg */
 window.addEventListener("scroll", function() {
   if(this.scrollY > 0){
@@ -62,6 +63,7 @@ function tabs(tabsSelector){
     }
     switchTab(clickedTab);
   });
+  
   function switchTab(clickedTab){
     const activeTab = tabsContainer.querySelector(".tabs-btn.active");
     const activePanel = tabsContainer.querySelector(".tabs-panel.active");
